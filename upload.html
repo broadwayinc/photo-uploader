@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/skapi-js@latest/dist/skapi.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Upload Photo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="gallery.html">Gallery</a>
+            <form id="logout-form" onsubmit="logout(event)" style="display:inline;">
+                <input type="submit" value="Logout">
+            </form>
+        </nav>
+    </header>
+    <main>
+        <form onsubmit="uploadPhoto(event)">
+            <label>Description<br><input name="description"></label><br>
+            <label>Select Photo<br><input type="file" name="picture" accept="image/*" required></label><br>
+            <input type="submit" value="Upload">
+        </form>
+        <div id="progress" style="display:none;">Uploading...</div>
+    </main>
+</body>
+</html>
