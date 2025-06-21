@@ -47,13 +47,13 @@ function loadGallery() {
 
                     const img = document.createElement('img');
                     img.src = url;
-                    img.alt = record.description || '';
+                    img.alt = (record.data && record.data.description) ? record.data.description : '';
                     wrapper.appendChild(img);
 
-                    if (record.description) {
+                    if (record.data && record.data.description) {
                         const desc = document.createElement('p');
                         desc.className = 'description';
-                        desc.textContent = record.description;
+                        desc.textContent = record.data.description;
                         wrapper.appendChild(desc);
                     }
 
