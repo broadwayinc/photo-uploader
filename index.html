@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Uploader</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/skapi-js@latest/dist/skapi.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Photo Uploader</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="upload.html" id="upload-link">Upload</a>
+            <a href="gallery.html">Gallery</a>
+            <form id="logout-form" onsubmit="logout(event)" style="display:inline;">
+                <input type="submit" value="Logout">
+            </form>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to Photo Uploader</h2>
+        <p>Use this simple app to upload your photos and view them in the gallery.</p>
+    </main>
+</body>
+</html>
