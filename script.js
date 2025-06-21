@@ -40,12 +40,24 @@ function loadGallery() {
     if (!container) return;
     skapi.getRecords({ table: 'photos' }).then(res => {
         res.list.forEach(record => {
-            if(record.bin && record.bin.picture && record.bin.picture[0]) {
+            if (record.bin && record.bin.picture && record.bin.picture[0]) {
                 record.bin.picture[0].getFile('endpoint').then(url => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'photo';
+
                     const img = document.createElement('img');
                     img.src = url;
                     img.alt = record.description || '';
-                    container.appendChild(img);
+                    wrapper.appendChild(img);
+
+                    if (record.description) {
+                        const desc = document.createElement('p');
+                        desc.className = 'description';
+                        desc.textContent = record.description;
+                        wrapper.appendChild(desc);
+                    }
+
+                    container.appendChild(wrapper);
                 });
             }
         });

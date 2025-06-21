@@ -32,3 +32,11 @@ main {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.photo {
+    text-align: center;
+}
+.photo .description {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+}
