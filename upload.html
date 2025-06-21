@@ -11,6 +11,15 @@
 <body>
     <header>
         <h1>Upload Photo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="upload.html" id="upload-link">Upload</a>
+            <form id="logout-form" onsubmit="logout(event)" style="display:inline;">
+                <input type="submit" value="Logout">
+            </form>
+        </nav>
     </header>
     <main>
         <form onsubmit="uploadPhoto(event)">
